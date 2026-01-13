@@ -5,6 +5,9 @@ const ADMIN_PREFIX = "admin";
 export const ROUTES = {
   ADMIN: {
     DASHBOARD: `/admin/dashboard`,
+    MEETING: `/admin/meeting`,
+    PROCEEDING: `/admin/proceedings`,
+    COMMITMENT: `/admin/commitments`,
     CATEGORIES: "/admin/categories",
     PRODUCTS: "/admin/products",
     INVENTORY: "/admin/inventory",
@@ -22,35 +25,26 @@ export const routes: NavMainItem[] = [
     title: "Dashboard",
     url: ROUTES.ADMIN.DASHBOARD,
     icon: "dashboard",
-    items: [
-      { title: "Dashboard", url: ROUTES.ADMIN.DASHBOARD, icon: "dashboard" },
-      { title: "Dashboard3", url: "/dashboard3", icon: "dashboard" },
-      { title: "Dashboard34", url: "/dashboard21", icon: "dashboard" },
-    ],
   },
   {
     title: "Reuniones",
-    url: "/Reuniones",
+    url: ROUTES.ADMIN.MEETING,
+    icon: "meeting",
+  },
+  {
+    title: "Actas",
+    url: ROUTES.ADMIN.PROCEEDING,
     icon: "adjustmentHistory",
   },
   {
-    title: "Calendario",
-    url: "/Calendario",
-    icon: "accountsReceivable",
-  },
-  {
-    title: "Eventos",
-    url: "/Eventos",
+    title: "Compromisos",
+    url: ROUTES.ADMIN.COMMITMENT,
     icon: "events",
   },
+
   {
-    title: "Agenda",
-    url: "/Agenda",
-    icon: "briefcase",
-  },
-  {
-    title: "Contactos",
-    url: "/Contactos",
+    title: "Usuarios",
+    url: ROUTES.ADMIN.USERS,
     icon: "contacts",
   },
 ];

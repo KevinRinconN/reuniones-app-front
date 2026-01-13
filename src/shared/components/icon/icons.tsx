@@ -61,6 +61,7 @@ import {
   Copy,
   Shapes,
   SlidersHorizontal,
+  Calendar1,
 } from "lucide-react";
 
 export type Icon = typeof LucideIcon;
@@ -80,6 +81,7 @@ const settings = {
 
 const adminPages = {
   dashboard: LayoutDashboard,
+  meeting: Calendar,
   bill: ShoppingCart,
   newBill: SquarePlus,
   creditBill: FileClock,

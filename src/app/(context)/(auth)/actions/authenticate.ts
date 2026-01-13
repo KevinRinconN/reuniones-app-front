@@ -1,7 +1,5 @@
 "use server";
 
-import { signIn } from "@/auth";
-import { AuthError } from "next-auth";
 import { AuthStatus } from "../types/auth.types";
 import { login } from "./login";
 import { createSession } from "../lib/session";
@@ -35,8 +33,8 @@ export async function authenticate(credentials: {
     return "Success";
   } catch (error) {
     console.log(error);
-    if (error instanceof AuthError) {
-      switch (error.type) {
+    if (error) {
+      switch (error) {
         case "CredentialsSignin":
           return "Invalid credentials";
         default:
